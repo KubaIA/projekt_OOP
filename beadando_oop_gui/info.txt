@@ -1,0 +1,57 @@
+felhasználói interfész: Készíts egy egyszerű felhasználói interfészt, ahol a felhasználó kiválaszthatja a kívánt műveletet (pl. foglalás, lemondás, listázás). (20 pont)
+
+
+adatvalidáció: 	A foglalás létrehozásakor ellenőrizd, hogy a dátum érvényes (jövőbeni) és a szoba elérhető-e akkor. (10 pont)
+				Biztosítsd, hogy a lemondások csak létező foglalásokra lehetségesek. (5 pont)
+				
+adatfeltöltés:	Töltsd fel az futtatás után a rendszert 1 szállodával, 3 szobával és 5 foglalással, mielőtt a felhasználói adatbekérés megjelenik. (10 pont)
+
+
+
+osztályok létrehozása:
+				Hozz létre egy Szoba absztrakt osztályt, amely alapvető attribútumokat definiál (ár, szobaszám). (5 pont)
+				Hozz létre az Szoba osztályból EgyagyasSzoba és KetagyasSzoba származtatott osztályokat, amelyek különböző attributumai vannak, és az áruk is különböző.(5 pont)
+				Hozz létre egy Szalloda osztályt, ami ezekből a Szobákból áll, és van saját attributuma is (név pl.) (10 pont)
+
+metódusok a foglalások kezelésére:
+				Implementálj egy metódust, ami lehetővé teszi szobák foglalását dátum alapján, visszaadja annak árát. (15 pont)
+				Implementálj egy metódust, ami lehetővé teszi a foglalás lemondását. (5 pont)
+				Implementálj egy metódust, ami listázza az összes foglalást. (5 pont)
+				
+				
+				
+				
+Szállodai szobafoglaló alkalmazás
+Készíts egy egyszerű szálloda szobafoglalási rendszert, Pythonban. A rendszernek képesnek kell lennie szobák kezelésére,
+foglalások kezelésére, létrehozására és lemondására, valamint a foglalások listázására.
+A Feladathoz a következő osztálok szükségesek:
+● Hozz létre egy Szoba absztrakt osztályt, amely alapvető attribútumokat definiál (ár, szobaszám).
+● Hozz létre az Szoba osztályból EgyagyasSzoba és KetagyasSzoba származtatott osztályokat, amelyek különböző attributumai vannak, és az áruk is különböző.
+● Hozz létre egy Szalloda osztályt, ami ezekből a Szobákból áll, és van saját attributuma is, ami legyen a név.
+● Hozz létre egy Foglalás osztályt, amelybe a Szálloda szobáinak foglalását tároljuk, itt elég, ha egy foglalás csak egy napra szól.
+
+Foglalások Kezelése
+● Implementálj egy metódust, ami lehetővé teszi szobák foglalását dátum alapján, visszaadja annak árát.
+● Implementálj egy metódust, ami lehetővé teszi a foglalás lemondását.
+● Implementálj egy metódust, ami listázza az összes foglalást.
+
+Felhasználói Interfész és adatvalidáció
+● Készíts egy egyszerű felhasználói interfészt, ahol a felhasználó kiválaszthatja a kívánt műveletet (pl. foglalás, lemondás, listázás).
+● A foglalás létrehozásakor ellenőrizd, hogy a dátum érvényes (jövőbeni) és a szoba elérhető-e akkor.
+● Biztosítsd, hogy a lemondások csak létező foglalásokra lehetségesek.
+● Töltsd fel az futtatás után a rendszert 1 szállodával, 3 szobával és 5 foglalással, mielőtt a felhasználói adatbekérés megjelenik.
+
+UI: 
+A. verzió, több ablakos
+	1. főablak 3+1 (kilépés) gombbal elérhető almenü 
+	2. szoba foglalása -  görgethető frém a listaelemeknek, egy "szobanév" beviteli mező (ami a lista elemeiből kiválasztható legördülő) és egy date picker, két gomb, mentés és mégsem
+	3. foglalás lemondása - görgethető frém, kijelölés funkcióval, két gomb, törlés és mégsem
+	4. foglalások kilistázása - görgethető frame, egy gomb, vissza
+	
+B. verzió, egy ablak
+	1. alapból 4 gomb aktív rajta, szoba foglalás, foglalás lemondása, foglalások kilistázása, kilépés
+		a. a szobafoglalás megjeleníti a görgethető frémet, a szobanevet, a date pickert, a mentés és a mégsem gombot, és eltűnteti a 3 alap vezérlőelemet (a kilépést nem)
+		b. a foglalás lemondása megjeleníti a kijelölés funkcióval rendelkező frémet, a törlés és mégse gombbel, az alap 3 vezérlőelem itt sem látszik. (lehet inkább mind a 4-et el kéne tűntetni.
+		c. a foglalások listázása csak egy frémet és egy vissza gombot jelenít meg, itt is eltűntetünk mindent (vagy3at)
+		d. a kilépés rákérdez és ennyi.
+
